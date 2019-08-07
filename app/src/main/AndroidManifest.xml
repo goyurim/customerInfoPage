@@ -16,22 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="screenOrientation">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".initionalActivity" />
-
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="barcode" />
-
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".initionalActivity" />
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home" />
+            android:label="@string/title_activity_home" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
         <activity android:name=".CustomerInformationActivity"></activity>
     </application>
 
